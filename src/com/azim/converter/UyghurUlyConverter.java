@@ -74,6 +74,7 @@ public class UyghurUlyConverter {
         ALPHABET_MAP.put("ي","y");
         ALPHABET_MAP.put("ۋ","w");
         ALPHABET_MAP.put("ئ","'");
+        ALPHABET_MAP.put(" ", " ");
     }
 
     /**
@@ -119,6 +120,8 @@ public class UyghurUlyConverter {
                     key = sub + ssub;
                     i++;
                 }
+            }else if (sub.equals(" ")) {
+                key = sub;
             }
             stringBuilder.append(getKeys(key));
         }
